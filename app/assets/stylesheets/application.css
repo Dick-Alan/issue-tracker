@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-body {
+ body {
     font-family: monospace;
     color: white;
     font-size: 18px;
