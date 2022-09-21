@@ -5,11 +5,15 @@
     <%= link_to '<< Go back to index', '/' %>
 </div>
  <div class='article-main'>
-    <h1><%= @article.title %></h1>
+    <h1><%= @article.title %> </h1>
+   
+    <h3>Posted by <%= @article.author %><h3>
+
+     <h4> priority: <%= @article.priority %></h4>
     
     <div class='article-body'><%= @article.body %></div>
         
-            <div class='created'>[+] Created <%= @article.created_at.strftime("%B %d, %Y, %T UTC") %> by <%= @article.author %></div>
+            <div class='created'>[+] Created <%= @article.created_at.strftime("%B %d, %Y, %T UTC") %> </div>
             
             <% if @article.updated_at != @article.created_at %>
                 <div class='edited'>[*] Edited <%= @article.updated_at.strftime("%B %d, %Y, %T UTC") %></div>

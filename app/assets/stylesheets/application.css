@@ -161,7 +161,7 @@ li {
 }
 .article-title {
     padding: 3px;
-   
+    font-size: 18px;
     margin-left: 1vw;
     color: white;
     text-align: center;
@@ -180,18 +180,23 @@ li {
 }
 .low {
     color: lightgreen;
+    font-size: 18px;
 }
 .very-low{
-    color: grey
+    color: grey;
+    font-size: 18px;
 }
 .medium {
-    color: yellow
+    color: yellow;
+    font-size: 18px;
 }
 .high {
-    color: orange
+    color: orange;
+    font-size: 18px;
 }
 .very-high{
-    color: red
+    color: red;
+    font-size: 18px;
 }
 
 .article-author {

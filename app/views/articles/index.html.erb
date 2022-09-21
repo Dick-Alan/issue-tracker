@@ -14,13 +14,14 @@
 
     </li>
     <br>
-    <% @articles.filter { |e| e.status== 'unresolved'}.each do |article|%>
+    <% hash = {'very low' => 0,'low' => 1,'medium' => 2,'high' => 3, 'very high' =>  4}  %>
+    <% @articles.filter { |e| e.status== 'unresolved'}.sort { |a,b| hash[a.priority] <=> hash[b.priority] }.reverse.each do |article|%>
     <%= render "article", article: article %>
     <% end %>
     </ul>
      There are <%= Article.resolved_count %> resolved issues.
 
-    <% @articles.filter { |e| e.status== 'resolved'}.each do |article|%>
+    <% @articles.filter { |e| e.status== 'resolved'}.sort { |a,b| hash[a.priority] <=> hash[b.priority] }.reverse.each do |article|%>
     <%= render "article", article: article %>
     <% end %>
     </ul>
