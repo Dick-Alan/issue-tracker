@@ -153,7 +153,7 @@ li {
 }
 .article-summary{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     border: 3px solid rgb(79, 27, 79);
     gap: 15px;
     margin: 8px;
@@ -174,4 +174,27 @@ li {
     padding: 5px;
     border-radius: 5px;
     margin: 10px;
+}
+.priorty{
+    font-size: 18px;
+}
+.low {
+    color: lightgreen;
+}
+.very-low{
+    color: grey
+}
+.medium {
+    color: yellow
+}
+.high {
+    color: orange
+}
+.very-high{
+    color: red
+}
+
+.article-author {
+    color: purple;
+    font-size: 18px;
 }

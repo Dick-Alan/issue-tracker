@@ -5,6 +5,15 @@
     </div>
     There are <%= Article.public_count %> unresolved issues. 
     <ul>
+    <li class='article-summary'>
+    <div>Title:</div>
+    <div>Author:</div>
+    <div>Time:</div>
+    <div>Status:</div>
+    <div>Priorty:</div>
+
+    </li>
+    <br>
     <% @articles.filter { |e| e.status== 'unresolved'}.each do |article|%>
     <%= render "article", article: article %>
     <% end %>

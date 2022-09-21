@@ -2,6 +2,13 @@
 
 <%= form_with model: article do |form| %>
  <div class='article-form'>
+ <div class='title'>
+        <%= form.label :author %><br>
+        <%= form.text_field :author %>
+        <% article.errors.full_messages_for(:author).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+    </div>
     <div class='title'>
         <%= form.label :title %><br>
         <%= form.text_field :title %>
@@ -23,6 +30,11 @@
         <%= form.label :status %><br>
         <%= form.select :status, ['unresolved', 'resolved', 'archived'], selected: 'unresolved' %>
     </div>
+    <div class='status'>
+        <%= form.label :priority %><br>
+        <%= form.select :priority, ['very low', 'low', 'medium', 'high', 'very high'], selected: 'medium' %>
+    </div>
+
         <%= form.submit %>
     </div>
  </div>
