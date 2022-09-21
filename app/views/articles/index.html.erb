@@ -1,35 +1,19 @@
 <div class='articles'>
     <h1>Issue Tracker.</h1>
-
-    There are <%= Article.public_count %> unresolved issues.
-
+    <div class='return-button'>
+        <%= link_to "[+] Add a new issue", new_article_path %>
+    </div>
+    There are <%= Article.public_count %> unresolved issues. 
     <ul>
-    <% @articles.each do |article| %>
-    <% unless article.archived? %>
-        <li class='article-summary'>
-        <div class='article-title'>
-        
-        <%= link_to article.title, article %>
-       
-        </div>
-        
-        
-        <div>
-            <div class='timestamp' >created at <%= article.created_at %></div>
-            <div class='timestamp' >last update <%= article.updated_at %></div>
-        </div>
-    
-        <% if article.status == 'resolved' %>
-            <div class='status-good'><%= article.status %></div>
-        <% else %>
-            <div class='status-bad'><%= article.status %></div>
-        <% end %>
-        
-
-        </li>
-    <% end %>
+    <% @articles.filter { |e| e.status== 'unresolved'}.each do |article|%>
+    <%= render "article", article: article %>
     <% end %>
     </ul>
+     There are <%= Article.resolved_count %> resolved issues.
 
-   <button><%= link_to "Add Issue", new_article_path %></button>
+    <% @articles.filter { |e| e.status== 'resolved'}.each do |article|%>
+    <%= render "article", article: article %>
+    <% end %>
+    </ul>
+   
 <div>

@@ -1,0 +1,23 @@
+ <% unless article.archived? %>
+        <li class='article-summary'>
+        <div class='article-title'>
+        
+        <%= link_to article.title, article %>
+       
+        </div>
+        
+        
+        <div>
+            <div class='timestamp' >created <%= article.created_at.strftime("%B %d, %Y, %T UTC") %></div>
+            <div class='timestamp' >updated <%= article.updated_at.strftime("%B %d, %Y, %T UTC") %></div>
+        </div>
+    
+        <% if article.status == 'resolved' %>
+            <div class='status-good'><%= article.status %></div>
+        <% else %>
+            <div class='status-bad'><%= article.status %></div>
+        <% end %>
+        
+
+        </li>
+    <% end %>

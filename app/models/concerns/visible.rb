@@ -12,6 +12,9 @@ module Visible
     def public_count
       where(status: 'unresolved').count
     end
+    def resolved_count
+        where(status: 'resolved').count
+    end
   end
 
     def archived?
