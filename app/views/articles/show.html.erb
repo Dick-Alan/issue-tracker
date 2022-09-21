@@ -1,0 +1,32 @@
+
+<div class='article'>
+<%= turbo_include_tags %>
+ <div class='article-main'>
+    <h1><%= @article.title %></h1>
+
+    <div class='article-body'><%= @article.body %></div>
+        
+            <div class='created'>[+] Created at <%= @article.created_at %></div>
+            
+            <% if @article.updated_at != @article.created_at %>
+                <div class='edited'>[*] Edited at <%= @article.updated_at %></div>
+                
+            <%end%>
+ 
+        
+    <div class='options'>
+        <button><%= link_to "edit", edit_article_path(@article) %></button>
+        <button><%= link_to "delete", article_path(@article), data: {
+                            turbo_method: :delete,
+                            turbo_confirm: "Are you sure?"
+                        } %></button>
+    </div>
+    
+ </div>
+
+    <h2>Comments:</h2>
+    <%= render @article.comments %>
+
+    <h2>Add a comment:</h2>
+    <%= render 'comments/form' %>
+</div>

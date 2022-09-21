@@ -1,0 +1,29 @@
+
+
+<%= form_with model: article do |form| %>
+ <div class='article-form'>
+    <div class='title'>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+        <% article.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div class='article-body'>
+        <%= form.label :body %><br>
+        <div class='formbody'>
+        <%= form.text_area :body %><br>
+        </div>
+        <% article.errors.full_messages_for(:body).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+    </div>
+    <div class='status'>
+        <%= form.label :status %><br>
+        <%= form.select :status, ['unresolved', 'resolved', 'archived'], selected: 'unresolved' %>
+    </div>
+        <%= form.submit %>
+    </div>
+ </div>
+<% end %>

@@ -1,0 +1,168 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+    font-family: monospace;
+    color: white;
+    font-size: 18px;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+ .article{
+    padding: 15px;
+    width: auto;
+    height: auto;
+    background-image: linear-gradient(black, #111111);
+
+ }
+ .articles{
+    background-image: linear-gradient(black, #111111);
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 15px;
+ }
+
+ button{
+    border: 3px solid rgb(62, 45, 62);
+    border-radius: 5px;
+    color: greenyellow;
+    background: #555555;
+
+
+ }
+
+ link{
+    color: white;
+ }
+ .comment {
+    border: 3px solid rgb(70, 40, 70);
+    margin-left: 2vw;
+    padding: 15px;
+    width: auto;
+    border-radius: 5px;
+    background: black;
+ }
+.comment-body{
+    padding: 15px;
+    word-wrap: break-word;
+    border:3px solid rgb(65, 42, 65);
+    border-radius: 5px;
+    max-width: 85vw;
+    background-color: #222222;
+}
+
+.formbody {
+    width: 65vw;
+   
+}
+form {width: 65vw}
+input {
+    background-color:#222222;
+    color: greenyellow;
+
+}
+textarea {
+    width: 50vw;
+    height: 35vh;
+    background-color:#222222;
+    color: greenyellow;
+}
+
+.article-form {
+    padding: 15px;
+}
+.title {
+    padding: 15px;
+}
+
+label {
+    margin: 3px;
+}
+
+.article-body {
+    word-wrap: break-word;
+    padding: 15px;
+    border: 2px solid rgb(60, 39, 60);
+    border-radius: 5px;
+    background: #222222;
+}
+.article-main {
+    border: 3px solid rgb(71, 48, 71);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.options {
+    padding: 15px;
+}
+
+a:visited { 
+    text-decoration: none; 
+    color: white; 
+   }
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: grey;
+}
+
+ul {
+    padding: 15px;
+}
+li {
+    padding: 5px;
+    font-size: 24px;
+}
+
+.created {
+    color: green;
+}
+.edited {
+    color: purple;
+}
+.status-good {
+    font-size: 14px;
+    color: green;
+}
+.status-bad {
+    font-size: 14px;
+    color: red;
+}
+.invisible {
+    visibility: none;
+    display: none;
+}
+.timestamp {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+.article-summary{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 3px solid rgb(79, 27, 79);
+    gap: 15px;
+    margin: 8px;
+    border-radius: 5px;
+}
+.article-title {
+    padding: 3px;
+   
+    margin-left: 1vw;
+    color: white;
+    text-align: center;
+}

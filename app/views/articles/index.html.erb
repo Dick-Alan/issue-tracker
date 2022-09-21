@@ -1,0 +1,35 @@
+<div class='articles'>
+    <h1>Issue Tracker.</h1>
+
+    There are <%= Article.public_count %> unresolved issues.
+
+    <ul>
+    <% @articles.each do |article| %>
+    <% unless article.archived? %>
+        <li class='article-summary'>
+        <div class='article-title'>
+        
+        <%= link_to article.title, article %>
+       
+        </div>
+        
+        
+        <div>
+            <div class='timestamp' >created at <%= article.created_at %></div>
+            <div class='timestamp' >last update <%= article.updated_at %></div>
+        </div>
+    
+        <% if article.status == 'resolved' %>
+            <div class='status-good'><%= article.status %></div>
+        <% else %>
+            <div class='status-bad'><%= article.status %></div>
+        <% end %>
+        
+
+        </li>
+    <% end %>
+    <% end %>
+    </ul>
+
+   <button><%= link_to "Add Issue", new_article_path %></button>
+<div>
