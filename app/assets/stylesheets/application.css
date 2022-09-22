@@ -30,7 +30,6 @@
  }
  .articles{
     margin-top: 3vh;
-    position: absolute;
     background-image: linear-gradient(black, #111111);
     border: 3px solid black;
     border-radius: 5px;
