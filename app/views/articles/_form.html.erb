@@ -16,6 +16,13 @@
         <div><%= message %></div>
         <% end %>
     </div>
+     <div class='invisible'>
+        <%= form.label :IP %><br>
+        <%= form.select :IP, [request.remote_ip], selected: request.remote_ip %>
+        <% article.errors.full_messages_for(:IP).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+    </div>
 
     <div class='article-body'>
         <%= form.label :body %><br>

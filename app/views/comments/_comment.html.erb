@@ -13,6 +13,7 @@
      
     </div>
     <div class='created'>[+] Created <%= comment.created_at.strftime("%B %d, %Y, %T UTC") %> </div>
+    <div class='IP'> IP: ( <%= comment.IP %> ) </div>
     
     <p>
         <button><%= link_to "Delete", [comment.article, comment], data: {

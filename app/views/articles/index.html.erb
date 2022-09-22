@@ -1,13 +1,9 @@
 <div class='articles'>
 <%= stylesheet_link_tag 'application.css'%>
-    <h1>Issue Tracker.</h1>
-    <div class='return-button'>
-        <%= link_to "[+] Add a new issue", new_article_path %>
-    </div>
     There are <%= Article.public_count %> unresolved issues. 
    
     <ul>
-    <li class='article-summary'>
+    <li class='article-summary container'>
     <div>Title:</div>
     <div>Author:</div>
     <div>Time:</div>

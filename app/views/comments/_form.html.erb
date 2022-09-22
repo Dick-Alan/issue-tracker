@@ -9,7 +9,9 @@
     <%= form.text_area :body %>
   </p>
   <p class='invisible'>
-  
+    <%= form.label :IP %>
+    <%= form.select :IP, [request.remote_ip], selected: request.remote_ip %>
+    
      <%= form.label :status %><br> 
      <%= form.select :status, ['unresolved', 'resolved', 'archived'], selected: 'resolved' %> 
   </p>
